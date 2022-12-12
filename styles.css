@@ -1,0 +1,80 @@
+.toggle-switch {
+  display     : inline-flex;
+  align-items : center;
+  font-family : 'Sora', sans-serif;
+  font-weight : 700;
+  font-size   : .875rem;
+  cursor      : pointer;
+  }
+.toggle-switch-border {
+  display             : inline-flex;
+  align-items         : center;
+  width               : 60px;
+  height              : 36px;
+  border              : 1px solid var(--primary); 
+  border-radius       : 20px;
+  box-sizing          : border-box;
+  margin-inline-start : 8px;
+  }
+.toggle-switch input {
+  display: none;
+  }
+.toggle-switch-dot {
+  width         : 28px;
+  height        : 28px;
+  border-radius : 50%;
+  background    : var(--primary);
+  transform     : translate3d(3px, 0, 0);
+  transition    : transform .1s ease-in-out;
+  }
+.toggle-switch input:checked + * .toggle-switch-dot {
+  transform : translate3d(26px, 0, 0);
+  }
+body {
+  color              : var(--primary);
+  font-family        : "Work Sans", sans-serif;
+  background         : var(--background);
+  /*box-sizing       : border-box;*/
+  transition         : color 0.5s;
+  transition         : background 0.5s;
+ 
+  --dark-background  : #253a52;
+  --dark-primary     : white; /*#FFFFE3*/
+  --dark-link        : #A9FE75;
+ 
+  --light-background : white; /*#ffffe3*/
+  --light-primary    : #253a52;
+  --light-link       : #1348da;
+ 
+  --background       : var(--light-background);
+  --primary          : var(--light-primary);
+  --link             : var(--light-link);
+  }
+a {
+  color : var(--link);
+  }
+/* separator bars */
+nav,
+section {
+  border-block-end : 1px solid var(--primary);
+  }
+/* container for dark-mode toggle */
+header .controls {
+  display         : flex;
+  justify-content : end;
+  padding         : 1rem 0;
+  margin-right    : 3rem;
+  }
+ a.btn {
+  display         : inline-flex;
+  align-items     : center;
+  background      : var(--link);
+  color           : var(--background);
+  text-decoration : none;
+  padding         : 0 1rem;
+  height          : 2.5rem;
+  border-radius   : 1.25rem;
+  font-family     : "Montserrat", sans-serif;
+  font-weight     : 700;
+  font-size       : 0.875rem;
+  }
